@@ -17,8 +17,6 @@ application = DjangoWhiteNoise(application)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
-
 #application = get_wsgi_application()
 
 # This application object is used by the development server
