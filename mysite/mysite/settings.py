@@ -26,7 +26,7 @@ SECRET_KEY = '8sq*#nfq7@j46r1ez&&$r1k&(g&&fvfb1#l)1z$(@#_65xtiw!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['damp-lake-80013.herokuapp.com', 'maxcorwin.com']
+ALLOWED_HOSTS = ['damp-lake-80013.herokuapp.com', 'maxcorwin.com', '127.0.0.1']
 
 
 # Application definition
@@ -131,6 +131,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
+
+# for gzip
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 django.setup()
 

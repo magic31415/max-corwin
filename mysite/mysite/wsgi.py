@@ -10,6 +10,10 @@ https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 import os
 from django.core.wsgi import get_wsgi_application
 import django.core.handlers.wsgi
+from whitenoise.django import DjangoWhiteNoise
+
+application = get_wsgi_application()
+application = DjangoWhiteNoise(application)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
@@ -17,4 +21,4 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
 
 # This application object is used by the development server
 # as well as any WSGI server configured to use this file.
-application = django.core.handlers.wsgi.WSGIHandler()
+#application = django.core.handlers.wsgi.WSGIHandler()
