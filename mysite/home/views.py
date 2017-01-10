@@ -25,3 +25,7 @@ def index(request):
 
 def thanks(request):
     return render(request, 'home/thanks.html')
+
+def portrait(request):
+    return render(request, 'home/portrait.html')
+
